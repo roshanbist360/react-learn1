@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Student from './Components/Student.js'
+import StudentData from './data/StudentData'
+import StudentStats from './Components/StudentStats';
+import { useState } from 'react'
+
 
 function App() {
+  const [student, setStudent] = useState(StudentData)
+
+  const deleteItem = (id)=>{
+    setStudent(student.filter((item)=> item.id !== id));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <> 
+      <StudentStats student={StudentData}/>
+      <Student student={StudentData} handleDelete={deleteItem}/>
+    </>  
   );
 }
 

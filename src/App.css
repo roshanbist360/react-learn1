@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card{
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  background: #ccc;
+  color: #222;
+  border-radius: 5px;
+}
+
+.reverse{
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#button1{
+  background: #ed1c24;
+  border-style: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.StInfo{
+  margin-left: 20px;
+}
